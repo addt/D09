@@ -12,8 +12,11 @@
 
 # Body
 def most_frequent(s):
-    ...
-
+    let_freq = dict()
+    for i in list(s.lower()):
+        let_freq[i] = let_freq.get(i, 0) + 1
+    for i in sorted(let_freq, key = let_freq.__getitem__, reverse = True):
+        print("{} is printed {} times".format(i, let_freq[i]))
 
 ###############################################################################
 def main():   # DO NOT CHANGE BELOW
